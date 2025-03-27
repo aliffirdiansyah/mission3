@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beranda | VideoBelajar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .typewriter::after {
+            content: "|";
+            display: inline-block;
+            animation: blink 0.7s infinite;
+        }
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+    </style>
+</head>
+<body class="flex flex-col items-center min-h-screen bg-white">
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md py-4 px-6 w-full fixed top-0 z-10">
+        <div class="container mx-auto flex items-center justify-between">
+            <a href="#"><img src="Logo.png" alt="Logo" class="h-10"></a>
+            <div class="hidden md:flex items-center gap-4">
+                <span class="text-gray-600">Kategori</span>
+                <img src="profile.png" alt="Profile" class="w-10 h-10 rounded-full">
+            </div>
+            <button class="md:hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="w-full min-h-screen flex items-center justify-center px-8 mt-20">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+            <div class="space-y-6">
+                <h1 class="text-5xl font-extrabold text-gray-900 leading-tight">
+                    <span class="bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 to-red-500">VideoBelajar</span>
+                    IS HERE TO BE <br> YOUR <span id="typewriter" class="typewriter text-red-500"></span>
+                </h1>
+                <a href="#" class="inline-block bg-green-500 text-white text-lg py-4 px-8 rounded-full shadow-lg hover:bg-green-400 transition">Temukan Video Course!</a>
+            </div>
+            <div class="relative w-full flex justify-center">
+                <img src="hero.svg" alt="Profile" class="w-full max-w-xl rounded-lg shadow-lg">
+            </div>
+        </div>
+    </section>
+
+    <section class="w-full py-16 bg-gray-50">
+        <div class="container mx-auto px-8">
+            <h2 class="text-4xl font-bold text-center text-gray-900 mb-10">
+                Pilih Kategori
+            </h2>
+    
+            <!-- Tabs Navigation -->
+            <div class="flex justify-center space-x-4 mb-6">
+                <button class="tab-button px-6 py-2 bg-green-500 text-white rounded-lg focus:outline-none hover:bg-green-400 transition" onclick="showTab('semua')">Semua Kelas</button>
+                <button class="tab-button px-6 py-2 bg-green-500 text-white rounded-lg focus:outline-none hover:bg-green-400 transition" onclick="showTab('pemasaran')">Pemasaran</button>
+                <button class="tab-button px-6 py-2 bg-green-500 text-white rounded-lg focus:outline-none hover:bg-green-400 transition" onclick="showTab('desain')">Desain</button>
+                <button class="tab-button px-6 py-2 bg-green-500 text-white rounded-lg focus:outline-none hover:bg-green-400 transition" onclick="showTab('pengembangan')">Pengembangan Diri</button>
+                <button class="tab-button px-6 py-2 bg-green-500 text-white rounded-lg focus:outline-none hover:bg-green-400 transition" onclick="showTab('bisnis')">Bisnis</button>
+            </div>
+    
+            <div id="semua" class="tab-content">
+                <div class="container mx-auto px-8">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                        <div class="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition flex flex-col">
+                            <img src="laravel.webp" alt="Course 1" class="w-full h-40 object-cover rounded-lg mb-4">
+                            <h3 class="text-xl font-semibold text-gray-800">Laravel 12 Web Development</h3>
+                            <p class="text-gray-600 mt-2 line-clamp-3">
+                                Kursus ini dirancang untuk membantu Anda menguasai Laravel 12, framework PHP yang populer untuk membangun aplikasi web modern, cepat, dan scalable. Dengan pendekatan praktis, Anda akan belajar bagaimana mengembangkan aplikasi berbasis database, mengelola autentikasi pengguna, menggunakan API, dan menerapkan praktik terbaik dalam pengembangan web.
+                            </p>
+                            <div class="mt-auto">
+                                <p class="text-sm text-gray-500 mt-2">By John Doe</p>
+                                <div class="flex items-center justify-between mt-2">
+                                    <span class="text-yellow-500 font-bold">⭐ 4.8</span>
+                                    <span class="text-green-500 font-bold">Rp. 120.000</span>
+                                </div>
+                                <a href="#" class="block mt-4 text-center bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-500 transition">Learn More</a>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition flex flex-col">
+                            <img src="js.png" alt="Course 2" class="w-full h-40 object-cover rounded-lg mb-4">
+                            <h3 class="text-xl font-semibold text-gray-800">JavaScript Fundamental</h3>
+                            <p class="text-gray-600 mt-2 line-clamp-3">
+                                JavaScript adalah bahasa pemrograman yang wajib dikuasai oleh setiap developer web. Dalam kursus ini, Anda akan belajar JavaScript dari dasar hingga mahir, mulai dari sintaks dasar, manipulasi DOM, hingga teknik lanjutan seperti asynchronous programming dan pengembangan aplikasi berbasis framework modern.
+                            </p>
+                            <div class="mt-auto">
+                                <p class="text-sm text-gray-500 mt-2">By Jane Smith</p>
+                                <div class="flex items-center justify-between mt-2">
+                                    <span class="text-yellow-500 font-bold">⭐ 4.7</span>
+                                    <span class="text-green-500 font-bold">Rp. 100.000</span>
+                                </div>
+                                <a href="#" class="block mt-4 text-center bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-500 transition">Learn More</a>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition flex flex-col">
+                            <img src="seo.jpg" alt="Course 2" class="w-full h-40 object-cover rounded-lg mb-4">
+                            <h3 class="text-xl font-semibold text-gray-800">SEO Courses</h3>
+                            <p class="text-gray-600 mt-2 line-clamp-3">
+                                Optimalkan website Anda dan raih peringkat teratas di mesin pencari! 🚀 Kursus ini akan membahas strategi SEO terbaru, mulai dari riset keyword, on-page dan off-page SEO, hingga teknik link building yang efektif. Anda juga akan belajar cara menganalisis performa website menggunakan Google Analytics dan Search Console. Cocok untuk pemula hingga profesional yang ingin meningkatkan traffic organik dan menguasai dunia digital marketing!
+                            </p>
+                            <div class="mt-auto">
+                                <p class="text-sm text-gray-500 mt-2">By Jane Smith</p>
+                                <div class="flex items-center justify-between mt-2">
+                                    <span class="text-yellow-500 font-bold">⭐ 4.7</span>
+                                    <span class="text-green-500 font-bold">Rp. 200.000</span>
+                                </div>
+                                <a href="#" class="block mt-4 text-center bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-500 transition">Learn More</a>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition flex flex-col">
+                            <img src="figma.png" alt="Course 2" class="w-full h-40 object-cover rounded-lg mb-4">
+                            <h3 class="text-xl font-semibold text-gray-800">Figma Fundamental</h3>
+                            <p class="text-gray-600 mt-2 line-clamp-3">
+                                Pelajari Figma dari dasar hingga mahir dalam kursus ini! Anda akan memahami cara mendesain antarmuka pengguna (UI) yang modern, membuat prototipe interaktif, serta berkolaborasi secara efektif dengan tim. Kursus ini mencakup teknik desain UX, penggunaan komponen dan variabel, serta integrasi dengan alat lain. Cocok bagi pemula maupun desainer yang ingin meningkatkan keterampilan mereka dalam desain digital.
+                            </p>
+                            <div class="mt-auto">
+                                <p class="text-sm text-gray-500 mt-2">By Jane Smith</p>
+                                <div class="flex items-center justify-between mt-2">
+                                    <span class="text-yellow-500 font-bold">⭐ 4.7</span>
+                                    <span class="text-green-500 font-bold">Rp. 100.000</span>
+                                </div>
+                                <a href="#" class="block mt-4 text-center bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-500 transition">Learn More</a>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition flex flex-col">
+                            <img src="digimark.jpeg" alt="Course 2" class="w-full h-40 object-cover rounded-lg mb-4">
+                            <h3 class="text-xl font-semibold text-gray-800">Digital Marketing Fundamental</h3>
+                            <p class="text-gray-600 mt-2 line-clamp-3">
+                                Kuasai strategi pemasaran digital untuk meningkatkan bisnis dan karier Anda! Kursus ini mencakup SEO, social media marketing, Google Ads, email marketing, dan content marketing. Anda akan belajar bagaimana membangun brand, menarik pelanggan, serta menganalisis performa kampanye menggunakan data. Cocok untuk pemula maupun profesional yang ingin mengembangkan keahlian di dunia digital.
+                            </p>
+                            <div class="mt-auto">
+                                <p class="text-sm text-gray-500 mt-2">By Jane Smith</p>
+                                <div class="flex items-center justify-between mt-2">
+                                    <span class="text-yellow-500 font-bold">⭐ 4.7</span>
+                                    <span class="text-green-500 font-bold">Rp. 130.000</span>
+                                </div>
+                                <a href="#" class="block mt-4 text-center bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-500 transition">Learn More</a>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition flex flex-col">
+                            <img src="design.jpg" alt="Course 2" class="w-full h-40 object-cover rounded-lg mb-4">
+                            <h3 class="text-xl font-semibold text-gray-800">Brand Design</h3>
+                            <p class="text-gray-600 mt-2 line-clamp-3">
+                                Pelajari cara membangun identitas brand yang kuat dan berkesan! Dalam kursus ini, Anda akan memahami prinsip desain branding, mulai dari logo, warna, tipografi, hingga strategi visual yang efektif. Dengan kombinasi teori dan praktik menggunakan tools seperti Figma dan Adobe Illustrator, Anda akan mampu menciptakan brand yang menarik dan profesional. Cocok untuk desainer, pebisnis, dan siapa saja yang ingin mengembangkan identitas brand yang unik!
+                            </p>
+                            <div class="mt-auto">
+                                <p class="text-sm text-gray-500 mt-2">By Jane Smith</p>
+                                <div class="flex items-center justify-between mt-2">
+                                    <span class="text-yellow-500 font-bold">⭐ 4.7</span>
+                                    <span class="text-green-500 font-bold">Rp. 150.000</span>
+                                </div>
+                                <a href="#" class="block mt-4 text-center bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-500 transition">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="pemasaran" class="tab-content hidden">
+                <p class="text-gray-600 text-center">Pelajari teknik desain grafis dengan Photoshop, Illustrator, dan lainnya.</p>
+            </div>
+            <div id="desain" class="tab-content hidden">
+                <p class="text-gray-600 text-center">Kuasi strategi pemasaran digital, SEO, dan media sosial.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+<!-- Newsletter Section with Background Image -->
+<section class="w-full rounded-lg py-16 px-8 text-white text-center mt-10 bg-cover bg-center" style="background-image: url('newsletter.jpg');">
+    <div class="container mx-auto max-w-3xl bg-black bg-opacity-70 p-8 rounded-lg">
+        <h2 class="text-3xl font-bold mb-4">Berlangganan Newsletter Kami!</h2>
+        <p class="text-lg mb-6">Dapatkan update terbaru, tips eksklusif, dan promo menarik langsung ke email Anda.</p>
+        
+        <form class="flex flex-col md:flex-row justify-center gap-4">
+            <input type="email" placeholder="Masukkan email Anda" 
+                class="w-full md:w-auto px-4 py-3 text-gray-900 rounded-lg focus:outline-none">
+            <button type="submit" 
+                class="bg-yellow-400 text-gray-900 px-6 py-3 rounded-lg font-semibold hover:bg-yellow-300 transition">
+                Berlangganan
+            </button>
+        </form>
+    </div>
+</section>
+
+<!-- Footer Section -->
+ <section class="w-full mt-10">
+    <footer class="bg-gray-900 text-white py-10">
+        <div class="container mx-auto px-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Informasi Perusahaan -->
+            <div>
+                <img src="Logo.png" alt="">
+                <p class="text-gray-400">VideoBelajar adalah platform edukasi yang menyediakan berbagai kursus online untuk meningkatkan keterampilan Anda.</p>
+            </div>
+    
+            <!-- Navigasi Kategori -->
+            <div>
+                <h3 class="text-xl font-bold mb-4">Kategori</h3>
+                <ul class="text-gray-400 space-y-2">
+                    <li><a href="#" class="hover:text-yellow-400">Pemasaran</a></li>
+                    <li><a href="#" class="hover:text-yellow-400">Desain</a></li>
+                    <li><a href="#" class="hover:text-yellow-400">Pengembangan Diri</a></li>
+                    <li><a href="#" class="hover:text-yellow-400">Bisnis</a></li>
+                </ul>
+            </div>
+    
+            <!-- Sosial Media -->
+            <div>
+                <h3 class="text-xl font-bold mb-4">Ikuti Kami</h3>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-yellow-400">
+                        <i class="fab fa-facebook fa-2x"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-yellow-400">
+                        <i class="fab fa-twitter fa-2x"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-yellow-400">
+                        <i class="fab fa-instagram fa-2x"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-yellow-400">
+                        <i class="fab fa-linkedin fa-2x"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Copyright -->
+        <div class="text-center text-gray-500 mt-8 text-sm">
+            &copy; 2025 VideoBelajar. Semua Hak Dilindungi.
+        </div>
+    </footer>
+ </section>
+
+<!-- FontAwesome CDN untuk ikon sosial media -->
+<script src="https://kit.fontawesome.com/49b038522c.js" crossorigin="anonymous"></script>
+    <!-- Typewriter Effect -->
+    <script>
+        const words = ["GATEWAY TO SUCCESS", "LEARNING PLATFORM", "KEY TO GROWTH", "FUTURE OF EDUCATION"];
+        let index = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        const speed = 100;
+        const delay = 1000;
+
+        function typeEffect() {
+            const element = document.getElementById("typewriter");
+            const currentWord = words[index];
+            element.textContent = isDeleting ? currentWord.substring(0, charIndex--) : currentWord.substring(0, charIndex++);
+
+            if (!isDeleting && charIndex === currentWord.length) {
+                isDeleting = true;
+                setTimeout(typeEffect, delay);
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                index = (index + 1) % words.length;
+                setTimeout(typeEffect, 500);
+            } else {
+                setTimeout(typeEffect, speed);
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", () => setTimeout(typeEffect, 1000));
+
+    function showTab(tabId) {
+        // Sembunyikan semua tab
+        document.querySelectorAll('.tab-content').forEach(tab => tab.classList.add('hidden'));
+        
+        // Tampilkan tab yang dipilih
+        document.getElementById(tabId).classList.remove('hidden');
+    }
+
+    </script>
+</body>
+</html>

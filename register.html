@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | VideoBelajar</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-yellow-100 flex justify-center items-center min-h-screen">
+    <nav class="bg-white py-4 w-full fixed top-0">
+        <div class="container mx-auto px-4">
+          <a href="#" class="block"><img src="Logo.png" alt=""></a>
+        </div>
+    </nav>
+    <div class="w-full max-w-md mt-20">
+        <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+            <div class="p-6">
+                <h1 class="text-center text-2xl font-bold">Pendaftaran Akun</h1>
+                <p class="text-center text-gray-600">Yuk, daftarkan akunmu sekarang juga!</p>
+                <div class="mt-5">
+                    <label for="nama" class="block font-medium">Nama Lengkap <span class="text-red-500">*</span></label>
+                    <input type="text" name="nama" class="w-full border border-gray-300 rounded-lg p-2 mt-1">
+                    <label for="password" class="block font-medium mt-3">Email <span class="text-red-500">*</span></label>
+                    <input type="password" name="password" class="w-full border border-gray-300 rounded-lg p-2 mt-1">      
+                    <label for="nama" class="block font-medium mt-3">Jenis Kelamin <span class="text-red-500">*</span></label>
+                    <select name="jk" class="w-full border border-gray-300 rounded-lg p-2 mt-1">
+                        <option value="laki">Laki-Laki</option>
+                        <option value="perempuan">Perempuan</option>
+                    </select>
+                    <label for="password" class="block font-medium mt-3">No. HP <span class="text-red-500">*</span></label>
+                    <div class="flex border border-gray-300 rounded-lg overflow-hidden mt-1">
+                        <span class="bg-gray-200 px-3 flex items-center">+62</span>
+                        <input type="text" name="noHp" class="w-full p-2">
+                    </div>
+                    <label for="password" class="block font-medium mt-3">Kata Sandi <span class="text-red-500">*</span></label>
+                    <input type="password" name="nama" class="w-full border border-gray-300 rounded-lg p-2 mt-1">
+                    <label for="confirmPassword" class="block font-medium mt-3">Konfirmasi Kata Sandi<span class="text-red-500">*</span></label>
+                    <input type="password" name="password" class="w-full border border-gray-300 rounded-lg p-2 mt-1"> 
+
+                    <p class="text-right mt-3"><a href="#" class="text-gray-600 hover:underline">Lupa Password?</a></p>
+                    <a href="index.html" class="block text-center bg-green-500 text-white py-2 rounded-lg mt-3">Masuk</a>
+                    <a href="register.html" class="block text-center bg-green-100 text-green-500 py-2 rounded-lg mt-3">Daftar</a>
+                    <div class="text-center mt-3 text-gray-500">atau</div>
+                    <button class="w-full flex justify-center items-center bg-white border border-gray-200 py-2 rounded-lg mt-3">
+                        <img src="google.png" alt="" class="h-5 mr-2"> Masuk dengan Google
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
